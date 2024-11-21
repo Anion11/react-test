@@ -1,16 +1,17 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 
-import { HOME, PROFILE } from '@/shared/routes'
+import { HOME, PROFILE, TEST } from '@/shared/routes'
 import { Layout, LayoutProfile } from '@/shared/ui'
 
 import PrivateRoute from './PrivateRoutes'
-import { HomePage, ProfilePage } from '@/pages'
+import { HomePage, ProfilePage, TestPage } from '@/pages'
 
 export const AppRoutes = () => {
 	return (
 		<Routes>
 			<Route element={<Layout />}>
 				<Route path={HOME} element={<HomePage />} />
+				<Route path={TEST} element={<TestPage />} />
 			</Route>
 
 			<Route element={<PrivateRoute />}>
